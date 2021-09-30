@@ -78,9 +78,6 @@ img {
   margin-right: auto;
 }
 
-.section-text {
-  color: var(--text-color);
-}
 .container.padding-bottom {
   padding-bottom: 94px;
 }
@@ -143,10 +140,25 @@ img {
 .icon-envelope {
   width: 16px;
   height: 12px;
+  fill: var(--text-color);
 }
 .icon-mobile {
   width: 10px;
   height: 16px;
+  fill: var(--text-color);
+}
+.head-contact a:hover .icon-envelope,
+.head-contact a:focus .icon-envelope {
+  fill: var(--accent-color);
+}
+.head-contact a:hover .icon-mobile,
+.head-contact a:focus .icon-mobile {
+  fill: var(--accent-color);
+}
+
+.logo-item {
+  display: flex;
+  align-items: center;
 }
 /*------------Hero section------------*/
 
@@ -232,13 +244,35 @@ img {
   align-items: center;
   justify-content: center;
 }
-.icon {
-  height: 120px;
-  width: 270px;
+.svg-set {
+  flex-wrap: wrap;
+}
 
+.feat-item::before {
+  content: "";
+  height: 120px;
+  background-position: center;
+  display: block;
   background-color: var(--bg-color);
   margin-bottom: 30px;
   border-radius: 5px;
+  background-repeat: no-repeat;
+}
+.antenna::before {
+  background-size: 70px;
+  background-image: url(../pictures/antenna.svg);
+}
+.clock::before {
+  background-size: 70px;
+  background-image: url(../pictures/clock.svg);
+}
+.diagram::before {
+  background-size: 70px;
+  background-image: url(../pictures/diagram.svg);
+}
+.astronaut::before {
+  background-size: 70px;
+  background-image: url(../pictures/astronaut.svg);
 }
 
 /*------------We do section------------*/
@@ -271,7 +305,6 @@ img {
 }
 .team-item {
   width: 270px;
-  height: 368px;
   background: var(--main-bg-color);
   box-shadow: 1px 3px 0px rgb(0 0 0 / 12%);
 }
@@ -280,10 +313,7 @@ img {
   padding-bottom: 30px;
   text-align: center;
 }
-.team-card-text::after {
-  content: "";
-  background-image: url(..);
-}
+
 .team-subtitle {
   font-weight: 500;
   font-size: 16px;
@@ -294,12 +324,83 @@ img {
   margin-top: 10px;
   font-size: 16px;
   line-height: 1.18;
+  align-items: center;
+  color: var(--text-color);
+  margin-bottom: 16px;
+}
+.social-list {
+  display: flex;
+  justify-content: center;
+}
+.social-list-item {
+  width: 44px;
+  height: 44px;
+}
+.social-list-item + .social-list-item {
+  margin-left: 10px;
+}
+.social-link {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  justify-content: center;
+  align-items: center;
+}
+.social-link:hover,
+.social-link:focus {
+  background-color: var(--accent-color);
+}
+.social-icon {
+  width: 20px;
+  height: 20px;
+  fill: #afb1b8;
+}
+.social-link:hover .social-icon,
+.social-link:focus .social-icon {
+  fill: var(--main-bg-color);
+}
+/*------------Clients section------------*/
+
+.clients-item {
+  width: 170px;
+  height: 92px;
+}
+.clients-item + .clients-item {
+  margin-left: 30px;
+}
+.clients-link {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  border: 1px solid #afb1b8;
+  border-radius: 5px;
+  justify-content: center;
+  align-items: center;
+}
+.clients-link:hover,
+.clients-link:focus {
+  border-color: var(--accent-color);
+}
+.clients-icon {
+  width: 106px;
+  height: 60px;
+  fill: #afb1b8;
+}
+.clients-link:hover .clients-icon,
+.clients-link:focus .clients-icon {
+  fill: var(--accent-color);
 }
 /*------------Footer section------------*/
 .footer {
   padding-top: 60px;
   padding-bottom: 60px;
   background-color: var(--foot-bg-color);
+}
+.foot-flex {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
 }
 .logo.foot {
   color: var(--main-bg-color);
@@ -319,6 +420,31 @@ img {
 }
 .link.link-rgba {
   color: rgba(255, 255, 255, 0.6);
+}
+.join {
+  margin-left: 70px;
+  margin-right: auto;
+}
+.join-title {
+  color: var(--main-bg-color);
+  text-transform: uppercase;
+  font-size: 14px;
+  line-height: 1.14;
+  margin-bottom: 20px;
+}
+.social-clients-icon {
+  width: 20px;
+  height: 20px;
+}
+.social-list-item > .social-link.join-us {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+.social-list-item > .social-link.join-us:hover,
+.social-list-item > .social-link.join-us:focus {
+  background-color: var(--accent-color);
+}
+.social-link > .social-clients-icon {
+  fill: var(--main-bg-color);
 }
 /*------------Portfolio page------------*/
 :root {
@@ -391,6 +517,7 @@ img {
   line-height: 1.87;
   color: var(--text-color);
 }
+
 /*основной цвет текста #212121*/
 /*вторичный цвет #757575*/
 /*акцент цвет #2196F3*/

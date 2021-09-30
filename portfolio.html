@@ -41,14 +41,24 @@
           </nav>
         </div>
         <ul class="head-contact flex site-nav">
-          <li>
-            <a href="mailto:info@devstudio.com" class="section-text"
-              >info@devstudio.com</a
+          <li class="mail">
+            <a href="mailto:info@devstudio.com" class="logo-item">
+              <svg class="icon-envelope">
+                <use
+                  href="./pictures/sprite.svg#icon-envelope"
+                  width="16"
+                  height="12"
+                ></use>
+              </svg>
+              info@devstudio.com</a
             >
           </li>
-          <li>
-            <a href="tel:+380961111111" class="section-text"
-              >+38 096 111 11 11</a
+          <li class="telephone">
+            <a href="tel:+380961111111" class="logo-item">
+              <svg class="icon-mobile">
+                <use href="./pictures/sprite.svg#icon-mobile"></use>
+              </svg>
+              +38 096 111 11 11</a
             >
           </li>
         </ul>
@@ -192,32 +202,83 @@
     </main>
     <!--Подвал-->
     <footer class="footer">
-      <div class="container foot-padding">
-        <a href="./index.html" class="logo foot focus"
-          ><span class="logo-web">Web</span>Studio</a
-        >
-        <address class="address">
-          <ul class="foot-contacts">
-            <li class="address-item">
+      <div class="container foot-flex">
+        <div class="foot-address-block">
+          <a href="./index.html" class="logo foot focus"
+            ><span class="logo-web">Web</span>Studio</a
+          >
+          <address class="address">
+            <ul class="foot-contacts">
+              <li class="address-item">
+                <a
+                  href="https://goo.gl/maps/bssERs2WhnVpPogH9"
+                  target="blank"
+                  class="link"
+                  >г. Киев, пр-т Леси Украинки, 26</a
+                >
+              </li>
+              <li class="address-item">
+                <a href="mailto:info@example.com" class="link link-rgba"
+                  >info@example.com</a
+                >
+              </li>
+              <li class="address-item">
+                <a href="tel:+380961111111" class="link link-rgba"
+                  >+38 096 111 11 11</a
+                >
+              </li>
+            </ul>
+          </address>
+        </div>
+        <div class="join">
+          <h3 class="join-title">присоединяйтесь</h3>
+          <ul class="team-card-links social-list">
+            <li class="social-list-item">
               <a
-                href="https://goo.gl/maps/bssERs2WhnVpPogH9"
+                class="social-link join-us"
+                href="https://www.instagram.com"
                 target="blank"
-                class="link"
-                >г. Киев, пр-т Леси Украинки, 26</a
               >
+                <svg class="social-clients-icon">
+                  <use href="./pictures/sprite.svg#icon-instagram"></use>
+                </svg>
+              </a>
             </li>
-            <li class="address-item">
-              <a href="mailto:info@example.com" class="link link-rgba"
-                >info@example.com</a
+            <li class="social-list-item">
+              <a
+                class="social-link join-us"
+                href="https://www.twitter.com"
+                target="blank"
               >
+                <svg class="social-clients-icon">
+                  <use href="./pictures/sprite.svg#icon-twitter"></use>
+                </svg>
+              </a>
             </li>
-            <li class="address-item">
-              <a href="tel:+380961111111" class="link link-rgba"
-                >+38 096 111 11 11</a
+            <li class="social-list-item">
+              <a
+                class="social-link join-us"
+                href="https://www.facebook.com"
+                target="blank"
               >
+                <svg class="social-clients-icon">
+                  <use href="./pictures/sprite.svg#icon-facebook"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="social-list-item">
+              <a
+                class="social-link join-us"
+                href="https://www.linkedin.com"
+                target="blank"
+              >
+                <svg class="social-clients-icon">
+                  <use href="./pictures/sprite.svg#icon-linkedin"></use>
+                </svg>
+              </a>
             </li>
           </ul>
-        </address>
+        </div>
       </div>
     </footer>
   </body>
